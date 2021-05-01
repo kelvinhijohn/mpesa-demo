@@ -1,5 +1,6 @@
 <?php
 require_once 'messages.php';
+header("Content-Type: application/json");
 
 // get response from M-PESA Stream
 $mpesaResponse = file_get_contents('php://input');
