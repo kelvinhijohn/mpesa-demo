@@ -8,19 +8,13 @@
 
     $amount = $jsonMpesaResponse['TransAmount'];
 
-    if ($amount == 50 || $amount == 100 || $amount == 200) {
+    if ($amount == "50" || $amount == "100" || $amount == "200") {
         $response = '{
             "ResultCode": 0,
             "ResultDesc": "Accepted"
         }';
         
         echo $response;
-
-        // log the response
-        $logFile = "AA.txt";
-        $log = fopen($logFile, "a");
-        fwrite($log, $mpesaResponse);
-        fclose($log);
     
     }else {
         $response = '{
